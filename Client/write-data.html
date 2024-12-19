@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/Client/CSS/write-data.css'>
+    
+    <title>The Craft Stash</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/Client/js/config.js"></script>
+    <script src="/Client/js/write-data.js" async></script>
+</head>
+<body ng-app="addProductsApp" ng-controller="addProductsCtrl"></body>>
+    <header>
+        <nav>
+            <ul class="nav-buttons">
+                <li><a href="/home">Home</a></li> 
+                <li><a href="/write-data">Enter Data</a></li>
+                <li><a href="/view-data">View Data</a></li>
+                <li><a href="/browse-data">Browse Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section id="libraryConfig_section" class="section section-inset-1 ">
+            <div class="container productForm">
+                <h1>Input Data Page</h1>
+                <div class="row">
+                    <form id="config-form" ng-submit="submitProduct()">
+                        <label for="productDescription">Product Description:</label>
+                        <input type="text" id="ProducDescription" name="ProductDescription"ng-model="ProductDescription"><br><br>
+            
+                        <label for="Color">Color:</label>
+                        <input type="text" id="Color" name="Color" ng-model="Color"><br><br>
+            
+                        <label for="ManufacturerName"> Manufacturer:</label>
+                        <input type="text" id="ManufacturerName" name="ManufacturerName" ng-model="ManufacturerName"><br><br>
+                        
+                        <label for="ProductType">Product Type:</label>
+                        <input type="text" id="ProductType" name="ProductType"ng-model="ProductType"><br><br>
+                        
+                        <label for="Location">Location:</label>
+                        <input type="text" id="Location" name="Location"ng-model="Location"><br><br>
+                        
+                        <label for="Quantity">Quantity:</label>
+                        <input type="text" id="Quantity" name="Quantity"ng-model="Quantity"><br><br>
+                        
+            
+                        <div class="config-buttons">
+                            <button type="submit" id="data-submit" class="btn edit_btn">Submit</button>
+                            <button type="button" id="data-clear" class="btn edit_btn" ng-click="clearForm()">Clear</button>
+                        </div>
+                    </form>
+                </div>   
+            </div>
+        </section>
+    </main>
+        
+        
+    <footer>
+        <p>&copy; 2024 Beatriz Santana</p>
+    </footer>
+
+</body>
+</html>
